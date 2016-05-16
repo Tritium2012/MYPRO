@@ -1,0 +1,66 @@
+ <?php # Script - header.html
+
+//检查并显示标题名字
+if (!isset($page_title)) $page_title = 'MyPro-ALPHA';
+?><!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title><?php echo $page_title; ?></title>
+  <meta name="description" content="个人主页，项目开发" />
+  <meta name="keywords" content="个人主页，项目开发" />
+  <meta http-equiv="content-type" content="text/html; charset=utf8" />
+  <link rel="stylesheet" type="text/css" href="style/style.css" title="style" />
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="index.php">MY<span class="logo_colour">PRO</span></a></h1>
+          <?php echo '<h2>个人项目测试页.Alpha版测试中.'.constant("SYSTIME").'</h2>'; ?>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li class="selected"><a href="index.php">主页</a></li>
+          <li><a href="index.php?p=notice">公告</a></li>
+          <li><a href="index.php?p=mypro">MyPro计划</a></li>
+          <li><a href="index.php?p=rpgmaker">RPGMAKER</a></li>
+          <li><a href="index.php?p=progress">进度报告</a></li>
+          <li><a href="index.php?p=contact">联系我们</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="site_content">
+      <div class="sidebar">
+        <!-- insert your sidebar items here -->
+        <h3>最新消息</h3>
+        <h4>站点访问修复<h4>
+        <h5>5-6, 2016</h5>
+        <p>该站点外网无法访问的问题已修复，现在您可以通过手机访问到MYPRO主页。<br /><a href="article.php?p=4">Read more</a></p>
+        <h4>RPGMaker MV-红雀</h4>
+        <h5>4-27, 2016</h5>
+        <p> RPGMaker MV新作上线。个人自制RPG《红雀》，HTML5网页在线游戏。支持手机浏览器，支持触屏。<br /><a href="index.php?p=rpgmaker">Read more</a></p>
+        <p></p>
+        <h3>热点链接</h3>
+        <ul>
+          <li><a href="http://steamcommunity.com/app/363890" target="_blank">RPGMaker MV</a></li>
+          <li><a href="http://www.apache.org/" target="_blank">Apache</a></li>
+          <li><a href="http://www.html5webtemplates.co.uk/" target="_blank">Colour Blue</a></li>
+          <li><a href="http://hsk.oray.com/" target="_blank">花生壳官网</a></li>
+        </ul>
+        <h3>搜索</h3>
+        <form method="post" action="#" id="search_form">
+          <p>
+            <input class="search" type="text" name="search_field" value="该功能暂不可用……" readonly="true"/>
+            <input name="search" type="image" style="border: 0; margin: 0 0 -9px 5px;" src="style/search.png" alt="Search" title="Search" />
+          </p>
+        </form>
+      </div>
+         <div id="content">
+	<!-- End of header. -->
